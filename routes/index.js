@@ -12,18 +12,19 @@ var mixins = require('hmpo-template-mixins');
 var i18n = require('i18n-future')();
 var options = {
   translate: i18n.translate.bind(i18n),
-  controller: require('../lib/base-controller')
+  controller: require('../lib/base-controller'),
+  params: '/:action?'
 };
 
 app.use(mixins(i18n.translate.bind(i18n), fields));
 
-app.use('/not-arrived/', wizard(deliverySteps, fields, options));
+// app.use('/not-arrived/', wizard(deliverySteps, fields, options));
 
-app.use('/correct-mistakes/', wizard(errorSteps, fields, options));
+// app.use('/correct-mistakes/', wizard(errorSteps, fields, options));
 
-app.use('/lost-stolen-damaged/', wizard(lostSteps, fields, options));
+// app.use('/lost-stolen-damaged/', wizard(lostSteps, fields, options));
 
-app.use('/collection/', wizard(collectionSteps, fields, options));
+// app.use('/collection/', wizard(collectionSteps, fields, options));
 
 app.use('/someone-else/', wizard(someoneElseSteps, fields, options));
 

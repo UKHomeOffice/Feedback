@@ -21,7 +21,8 @@ module.exports = {
       'change-person-nationality',
       'change-person-id-number',
     ],
-    next: '/reason'
+    next: '/reason',
+    params: ':action?'
   },
   '/reason': {
     controller: require('../../controllers/reason'),
