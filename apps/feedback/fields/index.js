@@ -1,27 +1,26 @@
-'use strict'
+'use strict';
 
 module.exports = {
 
     'feedback-radio': {
         validate: ['required'],
-        className: ['inline', 'form-group'],
+        className: 'form-group',
         legend: {
-            className: 'visuallyhidden',
-            value: ''
+            value: 'Overall, how did you feel about the service you received today?'
         },
         options: [{
             value: 'Very satisfied',
             label: 'fields.feedback-radio.options.very-satisfied.label'
-        },  {
+        }, {
             value: 'Satisfied',
             label: 'fields.feedback-radio.options.satisfied.label'
-        },  {
+        }, {
             value: 'Neither satisfied or dissatisfied',
             label: 'fields.feedback-radio.options.neither.label'
-        },  {
+        }, {
             value: 'Dissatisfied',
             label: 'fields.feedback-radio.options.dissatisfied.label'
-        },  {
+        }, {
             value: 'Very dissatisfied',
             label: 'fields.feedback-radio.options.very-dissatisfied.label'
         }]
