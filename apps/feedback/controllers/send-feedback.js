@@ -2,7 +2,6 @@
 
 var util = require('util');
 var _ = require('underscore');
-var logger = require('../../lib/logger');
 
 var Controller = require('../../../lib/base-controller');
 var Model = require('../../common/models/email');
@@ -26,7 +25,7 @@ Submit.prototype.getValues = function locals(req) {
     if (formName !== undefined) {
       req.sessionModel.set('formName', formName);
     } else {
-      logger.info('Form Name is not defined');
+      // Log form name is not defined
     }
     var data = getReports(req);
     _.each(data, function addIndex(d, i) {
