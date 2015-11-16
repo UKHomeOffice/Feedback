@@ -11,7 +11,7 @@ var path = require('path');
 
 var customerPlainTextTemplates = {
   feedback: fs.readFileSync(
-    path.resolve(__dirname, './templates/customer/plain/feedback.mus')).toString('utf8')
+    path.resolve(__dirname, './templates/plain/feedback.mus')).toString('utf8')
 };
 
 var translationLocation = {
