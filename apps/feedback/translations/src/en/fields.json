@@ -1,0 +1,24 @@
+{
+  "howto-improve": {
+    "label": "How could we improve this form?"
+  },
+  "feedback-radio": {
+    "options": {
+      "very-satisfied": {
+        "label": "Very satisfied"
+      },
+      "satisfied": {
+        "label": "Satisfied"
+      },
+      "neither": {
+        "label": "Neither satisfied or dissatisfied"
+      },
+      "dissatisfied": {
+        "label": "Dissatisfied"
+      },
+      "very-dissatisfied": {
+        "label": "Very dissatisfied"
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{{<layout}}
+    {{$journeyHeader}}
+        {{#t}}journeys.feedback.header{{/t}}
+    {{/journeyHeader}}
+
+    {{$validationSummary}}
+        {{> partials-validation-summary}}
+    {{/validationSummary}}
+
+    {{$propositionHeader}}
+        {{> partials-navigation}}
+    {{/propositionHeader}}
+
+
+    {{$header}}{{#t}}pages.feedback.header{{/t}}{{/header}}
+
+
+    {{$content}}
+        <p>{{#t}}pages.feedback.description{{/t}}</p>
+
+        {{<partials-form}}
+
+            {{$form}}
+                {{#radio-group}}feedback-radio{{/radio-group}}
+
+                {{#textarea}}howto-improve{{/textarea}}
+                <p id="word-count">{{#t}}Word Count: {{/t}}</p>
+
+                <p>{{#t}}Please don't include any personal or financial information, for example your National Insurance or credit card numbers.{{/t}}</p>
+
+                {{#input-submit}}sendFeedback{{/input-submit}}
+            {{/form}}
+
+        {{/partials-form}}
+    {{/content}}
+{{/layout}}
