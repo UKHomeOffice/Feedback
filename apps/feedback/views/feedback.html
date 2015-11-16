@@ -16,7 +16,7 @@
 
 
     {{$content}}
-        <p>{{#t}}pages.feedback.description{{/t}}</p>
+        <h1 class="fb-thanks">{{#t}}pages.feedback.description{{/t}}</h1>
 
         {{<partials-form}}
 
@@ -26,7 +26,9 @@
                 {{#textarea}}howto-improve{{/textarea}}
                 <p id="word-count">{{#t}}Word Count: {{/t}}</p>
 
-                <p>{{#t}}Please don't include any personal or financial information, for example your National Insurance or credit card numbers.{{/t}}</p>
+                <div class="fb-personal-info">
+                  <p>{{#t}}Please don't include any personal or financial information, for example your National Insurance or credit card numbers.{{/t}}</p>
+                </div>
 
                 {{#input-submit}}sendFeedback{{/input-submit}}
             {{/form}}
