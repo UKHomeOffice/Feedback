@@ -3,7 +3,7 @@
 module.exports = {
     '/': {
         template: 'feedback.html',
-        controller: require('./controllers/sendFeedback'),
+        controller: require('./controllers/send-feedback'),
         fields: [
             'feedback-radio',
             'howto-improve'
