@@ -1,6 +1,6 @@
 {{#data}}
 
-    {{#feedback-radio}}{{#t}}pages.feedback.description{{/t}}
+    {{#feedback-radio}}{{#t}}fields.feedback-radio.legend{{/t}}
     {{feedback-radio}}
     {{/feedback-radio}}
 

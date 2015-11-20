@@ -6,7 +6,7 @@ module.exports = {
         validate: ['required'],
         className: 'form-group',
         legend: {
-            value: 'Overall, how did you feel about the service you received today?'
+            value: 'fields.feedback-radio.legend'
         },
         options: [{
             value: 'Very satisfied',
