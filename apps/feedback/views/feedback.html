@@ -1,0 +1,38 @@
+{{<layout}}
+    {{$journeyHeader}}
+        {{#t}}journeys.feedback.header{{/t}}
+    {{/journeyHeader}}
+
+    {{$validationSummary}}
+        {{> partials-validation-summary}}
+    {{/validationSummary}}
+
+    {{$propositionHeader}}
+        {{> partials-navigation}}
+    {{/propositionHeader}}
+
+
+    {{$header}}{{#t}}pages.feedback.header{{/t}}{{/header}}
+
+
+    {{$content}}
+        <h1 class="fb-thanks">{{#t}}pages.feedback.description{{/t}}</h1>
+
+        {{<partials-form}}
+
+            {{$form}}
+                {{#radio-group}}feedback-radio{{/radio-group}}
+
+                {{#textarea}}howto-improve{{/textarea}}
+                <p id="word-count">{{#t}}Word Count: {{/t}}<span id="finalCount">0</span></p>
+
+                <div class="fb-personal-info">
+                  <p>{{#t}}Please don't include any personal or financial information, for example your National Insurance or credit card numbers.{{/t}}</p>
+                </div>
+
+                {{#input-submit}}sendFeedback{{/input-submit}}
+            {{/form}}
+
+        {{/partials-form}}
+    {{/content}}
+{{/layout}}

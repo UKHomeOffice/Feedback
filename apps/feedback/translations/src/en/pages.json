@@ -1,0 +1,10 @@
+{
+  "feedback": {
+      "header": "Feedback",
+      "description": "Thank you"
+  },
+  "confirm": {
+      "description": "Thank you for your feedback.",
+      "return": "Return to the GOV.UK home page."
+  }
+}

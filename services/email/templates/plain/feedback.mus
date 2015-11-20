@@ -1,0 +1,12 @@
+{{#data}}
+
+    {{#feedback-radio}}{{#t}}fields.feedback-radio.legend{{/t}}
+    {{feedback-radio}}
+    {{/feedback-radio}}
+
+    {{#howto-improve}}
+    {{#t}}fields.howto-improve.label{{/t}}
+    {{howto-improve}}
+    {{/howto-improve}}
+
+{{/data}}

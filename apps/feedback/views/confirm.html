@@ -1,0 +1,24 @@
+{{<layout}}
+    {{$journeyHeader}}
+        {{#t}}journeys.feedback.header{{/t}}
+    {{/journeyHeader}}
+
+    {{$validationSummary}}
+        {{> partials-validation-summary}}
+    {{/validationSummary}}
+
+    {{$propositionHeader}}
+        {{> partials-navigation}}
+    {{/propositionHeader}}
+
+
+    {{$header}}{{#t}}pages.feedback.header{{/t}}{{/header}}
+
+
+    {{$content}}
+        <div>
+            <p>{{#t}}pages.confirm.description{{/t}}</p>
+            <a href="https://www.gov.uk">{{#t}}pages.confirm.return{{/t}}</a>
+        </div>
+    {{/content}}
+{{/layout}}

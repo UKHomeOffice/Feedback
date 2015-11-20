@@ -26,6 +26,26 @@ var allCountries = new Bloodhound({
   local: require('./countries').allCountries
 });
 
+var wordCounts = {};
+
+function wordCount(field) {
+  var number = 0;
+  var matches = $(field).val().match(/\b/g);
+  if (matches) {
+    number = matches.length / 2;
+  }
+  wordCounts[field] = number;
+  var finalCount = 0;
+  $.each(wordCounts, function count(k, v) {
+    finalCount += v;
+  });
+  $('#finalCount').text(finalCount);
+}
+
+$('#howto-improve').keyup(function keyup() {
+  wordCount(this);
+});
+
 
 $('#nationality, #nationality-error, #nominated-nationality')
 .typeahead({

@@ -1,0 +1,25 @@
+{
+  "howto-improve": {
+    "label": "How could we improve this form?"
+  },
+  "feedback-radio": {
+    "legend": "Overall, how did you feel about the service you received today?",
+    "options": {
+      "very-satisfied": {
+        "label": "Very satisfied"
+      },
+      "satisfied": {
+        "label": "Satisfied"
+      },
+      "neither": {
+        "label": "Neither satisfied or dissatisfied"
+      },
+      "dissatisfied": {
+        "label": "Dissatisfied"
+      },
+      "very-dissatisfied": {
+        "label": "Very dissatisfied"
+      }
+    }
+  }
+}
