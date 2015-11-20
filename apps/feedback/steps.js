@@ -11,6 +11,7 @@ module.exports = {
         next: '/confirm'
     },
     '/confirm': {
-        template: 'confirm.html'
+        template: 'confirm.html',
+        clearSession: true
     }
 };

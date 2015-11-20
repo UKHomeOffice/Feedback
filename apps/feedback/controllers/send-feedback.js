@@ -5,6 +5,7 @@ var _ = require('underscore');
 
 var Controller = require('../../../lib/base-controller');
 var Model = require('../../common/models/email');
+var Logger = require('../../../lib/logger');
 
 var Submit = function Submit() {
     Controller.apply(this, arguments);
@@ -21,16 +22,12 @@ function getReports(req) {
 Submit.prototype.getValues = function locals(req) {
     /* get Form Name */
     var formName = req.query.formName;
-
     if (formName !== undefined) {
       req.sessionModel.set('formName', formName);
     } else {
-      // Log form name is not defined
+      Logger.error('Form Name has not been added.');
     }
-    var data = getReports(req);
-    _.each(data, function addIndex(d, i) {
-        d.index = i;
-    });
+
     Controller.prototype.getValues.apply(this, arguments);
 };
 
@@ -44,6 +41,7 @@ Submit.prototype.saveValues = function saveValues(req, res, callback) {
 
   if (formName === undefined) {
     formName = 'Unknown Form';
+    Logger.error('Form Name is unknown.');
   }
 
   if (data && data.length) {
@@ -65,7 +63,7 @@ Submit.prototype.saveValues = function saveValues(req, res, callback) {
 
       });
   } else {
-    // Log Error
+    Logger.error('There is no data! No email sent!');
   }
 };
 
